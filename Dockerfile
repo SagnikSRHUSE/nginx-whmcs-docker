@@ -6,5 +6,4 @@ MAINTAINER Sagnik Sasmal, <sagnik@sagnik.me>
 ENV DEBIAN_FRONTEND noninteractive
 
 # Change NGINX user to www-data
-USER www-data
-
+RUN sed "s/user\ \ nginx/user\ \ www-data/g" /etc/nginx/nginx.conf
